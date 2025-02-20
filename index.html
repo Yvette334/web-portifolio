@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                 Portfolio
+            </div>
+            <button id="menuBtn" class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+            <div id="navMenu" class="nav-menu">
+                <a href="#about" class="nav-link">About</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="profile">
+                <img src="./profile.png" alt="Profile Picture" class="profile-pic">
+                <div class="profile-content">
+                    <h1>Software Engineering Student</h1>                    <p class="about-text">
+                        Hi, I'm a first-year Software Engineering student at ALU, currently in my third trimester. 
+                        I'm passionate about web development and problem-solving, focusing on creating 
+                        user-friendly and accessible digital solutions.
+                    </p>
+                    <div class="social-links">
+                        <a href="https://github.com/Yvette334" target="_blank" class="btn github" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/muhoracyeye-yvette-177217318/" target="_blank" class="btn linkedin" title="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="Resume.pdf" download class="btn download" title="Download CV">
+                            <i class="fas fa-download"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2>Skills</h2>
+            <div class="skills-grid">
+                <div class="card" onmouseover="showDetail(this)" onmouseout="hideDetail(this)">
+                    <h3><i class="fas fa-code"></i> HTML & CSS</h3>
+                    <div class="detail">• Semantic HTML Structure<br>• Responsive Layouts<br>• CSS Animations</div>
+                </div>
+                <div class="card" onmouseover="showDetail(this)" onmouseout="hideDetail(this)">
+                    <h3><i class="fab fa-js"></i> JavaScript</h3>
+                    <div class="detail">• DOM Manipulation<br>• Event Handling<br>• Form Validation</div>
+                </div>
+                <div class="card" onmouseover="showDetail(this)" onmouseout="hideDetail(this)">
+                    <h3><i class="fas fa-paint-brush"></i> Responsive Design</h3>
+                    <div class="detail">• Mobile-First Approach<br>• Flexible Layouts<br>• Media Queries</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Projects</h2>
+            <div class="projects-grid">
+                <div class="card" onclick="showProject(1)">
+                    <h3><i class="fas fa-code-branch"></i> Portfolio</h3>
+                    <p>Created a simple portfolio website to showcase my learning progress.</p>
+                    <button class="view-project">View Details</button>
+                </div>
+                <div class="card" onclick="showProject(2)">
+                    <h3><i class="fas fa-code-branch"></i> Event Handlers</h3>
+                    <p>Interactive event demonstration.</p>
+                    <button class="view-project">View Details</button>
+                </div>
+                <div class="card" onclick="showProject(3)">
+                    <h3><i class="fas fa-check-circle"></i> Regular Expressions</h3>
+                    <p>Extract structured data from unstructured text using Regex.</p>
+                    <button class="view-project">View Details</button>
+                </div>
+                <div class="card" onclick="showProject(4)">
+                    <h3><i class="fas fa-video"></i> Google Meet Clone</h3>
+                    <p>Designed a user-friendly video conferencing interface.</p>
+                    <button class="view-project">View Details</button>
+                </div>
+            </div>            
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>Contact Me</h2>
+            <form id="contactForm" class="contact-form">
+                <div class="form-group">
+                    <input type="text" id="name" oninput="validateField('name')" placeholder="Your name">
+                    <span id="nameError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="email" oninput="validateField('email')" placeholder="Your email">
+                    <span id="emailError" class="error"></span>
+                </div>
+                <div class="form-group">
+                    <textarea id="message" oninput="validateField('message')" placeholder="Your message" rows="5"></textarea>
+                    <span id="messageError" class="error"></span>
+                </div>
+                <button type="submit"><i class="fas fa-paper-plane"></i> Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-envelope"></i> y.muhoracye@alustudent.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i> Rwanda, Kigali</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 YVette Muhoracyeye. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal -->
+    <div id="projectModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
